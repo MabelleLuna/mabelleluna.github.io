@@ -71,23 +71,29 @@
 		    the login page using facial recognition to return 3 users with 
 		    the camera thinks the user might be.</p>
 		    <p>
-		    <a href=#><img src="images/login.png" alt="" class="img-fluid"></a>
+		    <a href=#><img src="images/host-server-diagram.png" alt="" class="img-fluid"></a>
 	            </p>
 	            
-		    <h3 class="mb-3 font-weight-bold">Accessing The Camera</h3>
+		    <h3 class="mb-3 font-weight-bold">Login Page</h3>
 		    <p>For the facial recognition program to work, it requires getting 
 		    the front end to access the camera. I used AJAX to create a media stream 
 		    asynchronously so the camera could be opened up like a webcam and 
-		    our program could access it. The login page opens the camera and 
-		    asks for permissions so the camera can be accessed by our openCV 
-		    program, and the program returns the top 3 IDs it thinks the user 
-		    may be. At the same time, these IDs are grabbed from our database 
-		    and the openCV program communicates with the database as the 
-		    front end communicates with the database. The picture below is 
+		    our program could access it. 
+		    <p>The picture below is 
 		    a prototype of when I first got the camera to run on our login page.
 		    </p>
 		    <p>
 		    <a href=#><img src="images/webcamnow.png" alt="" class="img-fluid"></a>
+	            </p>
+		    
+		    The login page opens the camera and 
+		    asks for permissions so the camera can be accessed by our openCV 
+		    program, and the program returns the top 3 IDs it thinks the user 
+		    may be. We use the library Libpqxx, a C++ client API for Postgres, 
+		    to connect to our database with C++ on our server. These IDs are grabbed 
+		    and returned as JSON objects and shown like the picture below. </p>
+		    <p>
+		    <a href=#><img src="images/login.png" alt="" class="img-fluid"></a>
 	            </p>
 		  
 		    <h2 class="mb-3 font-weight-bold">Host User Interface</h2>
@@ -97,11 +103,42 @@
 		    guests, and server assigned are stored in a database where the 
 		    our camera vision(openCV) program grabs the data. 
 		    When a host sits the customer down, the 
-		    openCV program gets a flag for a timer to start for the server UI. 
+		    openCV program will detect the host going to the table and 
+		    gets a flag for a timer to start on the server's UI. 
 		    This is essential for the server that serves that table.</p>
 		    <p>
 		    <a href=#><img src="images/hostpage.png" alt="" class="img-fluid"></a>
 	            </p>
+		    <h2 class="mb-3 font-weight-bold">Server User Interface</h2>
+		    <p>The Server's user interface includes their assigned tables, 
+		    along with a timer that changes colors depending on how long 
+		    they have been waiting. This is meant for showing how long 
+		    a customer has been waiting to be served. Each time the server 
+		    visits the table, the camera detects this and resets the timer. 
+		    Essentially, the server uses this UI to check whether she/he has 
+		    tables that have been waiting or have not been checked on. 
+		    This page refreshes as the server logs out and goes to check on 
+		    her/his table.
+		    </p>
+		    <p>
+		    <a href=#><img src="images/server.png" alt="" class="img-fluid"></a>
+	            </p>
+		    
+		    <p>The picture below is an example of what the camera sees vs. 
+		    what would be happening in real life.
+		    </p>
+		    <p>
+		    <a href=#><img src="images/sampletable.png" alt="" class="img-fluid"></a>
+	            </p>
+
+		    <p>The picture below is a diagram of our openCV program(C++) on the left 
+		    communicating with our database while the User Interfaces(PHP) on the right 
+		    also communicates with the database to show whats happening, with 
+		    the Server UI using some javascript to reflect the timers and table colors. 
+		    </p>
+		    <p>
+		    <a href=#><img src="images/postgres-diagram.png" alt="" class="img-fluid"></a>
+		    </p>
 		    <h5 class="mb-3 font-weight-bold">
 		    For additional information on this project, please feel 
 		    free to let me know!
