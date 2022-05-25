@@ -60,16 +60,16 @@
 								<span class="subheading">Hi there!</span>
 								<h1 class="big-letter">Mabelle Luna</h1>
 								<h1 class="mb-4"><span>My Name is Mabelle Luna</span></h1>
-								<p class="mb-4">Currently a Software Developer.
+								<p class="mb-4">Currently a Developer for Front Row Sales & Marketing.
 								I have experience in software engineering, full stack development,
-								with both back end and front end development. I recently graduated May 2020 from
+								with both back end and front end development. I graduated May 2020 from
 								 California State University of Bakersfield with a Bachelor's of 
 								Science in Computer Science, with my concentration being in Computer 
 								Information Systems.</p>
 								<h3 class="signature h1">Mabelle Luna</h3>
 								<ul class="ftco-social mt-3">
-			      <h6>Download my resume</h6>
-		              <li class="ftco-animate"><a href="https://docs.google.com/document/d/1iLtV1F8Pcv-9QfAv9RdflAEJxVOHi1Yd/edit?usp=sharing&ouid=116975299353336435538&rtpof=true&sd=true"><span class="icon-download"></span></a></li>
+			     <!-- <h6>Download my resume</h6>
+		              <li class="ftco-animate"><a href="https://docs.google.com/document/d/1iLtV1F8Pcv-9QfAv9RdflAEJxVOHi1Yd/edit?usp=sharing&ouid=116975299353336435538&rtpof=true&sd=true"><span class="icon-download"></span></a></li>-->
 			      </ul>
 	            </div>
 						</div>
